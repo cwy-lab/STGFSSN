@@ -45,7 +45,7 @@ class MultiHeadGraphAttentionLayer(nn.Module):
         return out
 
 class GraphMambaImproved(nn.Module):
-    def __init__(self, num_nodes, seq_len, hidden_dim, forecast_horizon, dropout_rate=0.5, num_heads=4):
+    def __init__(self, num_nodes, seq_len, hidden_dim, forecast_horizon, dropout_rate=0.2, num_heads=4):
         
         super(GraphMambaImproved, self).__init__()
         self.num_nodes = num_nodes
