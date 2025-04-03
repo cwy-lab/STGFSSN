@@ -19,8 +19,8 @@ def main():
     data_norm = (data - data_min) / (data_max - data_min)
 
     
-    seq_len = 20
-    forecast_horizon = 12  
+    seq_len = 80
+    forecast_horizon = 20  
     dataset = TimeSeriesDataset(data_norm, seq_len, forecast_horizon)
 
     
@@ -38,10 +38,10 @@ def main():
     
     num_nodes = data.shape[1]  
     hidden_dim = 64
-    dropout_rate = 0.5
+    dropout_rate = 0.2
     num_heads = 4
     learning_rate = 1e-3
-    num_epochs = 30
+    num_epochs = 100
 
     model = GraphMambaImproved(num_nodes=num_nodes, seq_len=seq_len, hidden_dim=hidden_dim, 
                                 forecast_horizon=forecast_horizon, dropout_rate=dropout_rate, num_heads=num_heads)
