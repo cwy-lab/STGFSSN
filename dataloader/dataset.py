@@ -3,7 +3,7 @@ import torch
 from torch.utils.data import Dataset
 
 class TimeSeriesDataset(Dataset):
-    def __init__(self, data, seq_len=20, forecast_horizon=12):
+    def __init__(self, data, seq_len=80, forecast_horizon=20):
         
         self.seq_len = seq_len
         self.forecast_horizon = forecast_horizon
