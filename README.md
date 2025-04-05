@@ -7,7 +7,7 @@ This project implements a **Graph-Mamba** model for **multi-sensor time series f
 - **Graph Attention Networks (GAT)**: Uses multi-head **cross-attention** to capture relationships between different sensors.  
 - **Mamba State Space Modeling**: Incorporates **FFT-based state-space representation** to enhance long-term dependencies.  
 - **Multi-Branch Architecture**:  
-  - **Graph Attention Branch** → Extracts inter-sensor dependencies.  
+  - **Graph Attention Branch** → Extracts spatial dependencies.  
   - **FFT-Based State-Space Branch** → Captures frequency domain information.  
   - **CNN Skip Connection Branch** → Preserves raw time-domain features.  
 - **Min-Max Scaling & Inverse Scaling**: Data is **normalized before training** and **rescaled** after prediction.  
