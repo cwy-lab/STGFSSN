@@ -96,7 +96,7 @@ class GraphMambaImproved(nn.Module):
         # Learnable memory to store historical Fourier features
         self.fft_memory = nn.Parameter(torch.zeros(1, hidden_dim))
         # Learnable weight (scalar) for fusion between historical and current FFT features
-        self.fft_alpha = nn.Parameter(torch.tensor(0.5))
+        self.fft_alpha = nn.Parameter(torch.tensor(0.2))
         
         # ---------------- Skip Connection Branch: Raw Data CNN ----------------
         self.skip_cnn = nn.Sequential(
